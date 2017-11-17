@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Test'){
             steps {
-                sh 'tamarin-prover test'
+                sh './tamarin-prover test'
             }
         }
     }

@@ -8,6 +8,10 @@ SAPIC=~/.local/bin/sapic
 # Try to install Tamarin and SAPIC
 default: tamarin sapic
 
+local:
+	stack setup
+	stack install --flag tamarin-prover:threaded --local-bin-path $(PWD)
+
 # Default Tamarin installation via stack, multi-threaded
 .PHONY: tamarin
 tamarin:
